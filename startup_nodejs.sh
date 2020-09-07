@@ -7,6 +7,10 @@ dnf groupinstall "Development Tools"
 # 2. Next, check the available Node.js package contained in the Application Stream Repository using the following command.
 dnf module list nodejs
 # 3. Next, install the default Node.js module by running the following command.
+dnf install -y gcc-c++ make
+#https://tecadmin.net/install-latest-nodejs-on-centos-8/
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash 
+#curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash 
 dnf module install -y nodejs
 # If you are a developer, you can use the development profile to install the libraries that enable you to build dynamically loadable modules, as follows:
 dnf module install -y nodejs/development
