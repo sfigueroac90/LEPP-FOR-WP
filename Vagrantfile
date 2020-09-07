@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
    config.vm.network "public_network"
 
   # Share an additional folder to the guest VM. 
-  config.vm.synced_folder "./shared_data", "/shared_data"
+  # config.vm.synced_folder "./shared_data", "/shared_data"
   
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
@@ -41,5 +41,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: './startup_nginx.sh'
   config.vm.provision "shell", path: './startup_firewall.sh'
   config.vm.provision "shell", path: './create_test_reactapp.sh'
+  config.vm.provision "shell", path: './startup_LEMP_PostgreSQL.sh'
+  config.vm.provision "shell", path: './startup_wpcli.sh' #, run: 'always'
   config.vm.provision "shell", path: './extras.sh'
 end
