@@ -17,13 +17,6 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080 
   config.vm.network "forwarded_port", guest: 9000, host: 9001 
   config.vm.network :forwarded_port, guest: 22, host: 2222, host_ip: "0.0.0.0", id: "ssh", auto_correct: true
-
-  #config.vm.network "private_network", ip: "192.168.50.4"
-  # if Vagrant.has_plugin?('vagrant-registration')
-  #   config.registration.username = 'alejorondon'
-  #   config.registration.password = 'thoughtFISHER19'
-  #   config.registration.unregister_on_halt = false
-  # end
   
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
