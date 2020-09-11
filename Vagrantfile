@@ -4,10 +4,10 @@
 Vagrant.configure("2") do |config|
   # box at https://app.vagrantup.com/generic/boxes/rhel8
   config.vm.box = "centos/8"
-  #config.ssh.private_key_path = "~/.ssh/id_rsa"
-  #config.ssh.forward_agent = true
-  #config.ssh.insert_key = false
-  #config.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
+  config.ssh.private_key_path = "~/.ssh/id_rsa"
+  config.ssh.forward_agent = true
+  config.ssh.insert_key = false
+  config.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
