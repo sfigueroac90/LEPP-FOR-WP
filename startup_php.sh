@@ -8,6 +8,7 @@ sudo dnf module list php -y
 sudo dnf module enable php:remi-7.4 -y
 sudo dnf install -y php php-cli php-common
 sudo dnf install php-mysql
+sudo yum install php-pgsql
 php -v
 sudo systemctl start php-fpm
 sudo systemctl enable php-fpm

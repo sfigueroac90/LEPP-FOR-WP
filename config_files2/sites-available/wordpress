@@ -1,3 +1,4 @@
+#/etc/nginx/sites-available/
 server {
     listen   80;
     server_name  wordpress;
@@ -6,10 +7,12 @@ server {
     root /var/www/wordpress/;
     #root   /usr/share/nginx/html;
     index index.php index.html index.htm;
-    location /static/*{
-	autoindex on;
-	root /var/www/wordpress/testapp.com/static;
-    }
+
+    #location /static/*{
+	#autoindex on;
+	#root /var/www/wordpress/testapp.com/static;
+    #}
+
     location / {
         try_files $uri $uri/ =404;
     }

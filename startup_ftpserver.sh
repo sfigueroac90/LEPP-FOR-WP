@@ -1,7 +1,6 @@
 #!/bin/sh
 #https://www.linuxtechi.com/install-vsftpd-server-centos-8-rhel-8/
 #https://artisansweb.net/ftp-sftp-extension-for-visual-studio-code/#:~:text=Open%20the%20project%20in%20the,select%20the%20SFTP%3Aconfig%20option.
-
 #https://community.centminmod.com/threads/ftp-command-not-found.13091/
 yum install -y ftp
 
