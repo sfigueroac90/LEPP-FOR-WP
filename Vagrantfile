@@ -4,10 +4,10 @@
 Vagrant.configure("2") do |config|
   # box at https://app.vagrantup.com/generic/boxes/rhel8
   config.vm.box = "centos/8"
-  config.ssh.private_key_path = "~/.ssh/id_rsa"
-  config.ssh.forward_agent = true
-  config.ssh.insert_key = false
-  config.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
+  #config.ssh.private_key_path = "~/.ssh/id_rsa"
+  #config.ssh.forward_agent = true
+  #config.ssh.insert_key = false
+  #config.ssh.private_key_path = "~/.vagrant.d/insecure_private_key"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
@@ -16,7 +16,9 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3001 
   config.vm.network "forwarded_port", guest: 80, host: 8080 
   config.vm.network "forwarded_port", guest: 9000, host: 9001 
-  config.vm.network :forwarded_port, guest: 22, host: 2222, host_ip: "0.0.0.0", id: "ssh", auto_correct: true
+  config.vm.network "forwarded_port", guest: 20, host: 20 
+  config.vm.network "forwarded_port", guest: 21, host: 21
+  config.vm.network "forwarded_port", guest: 22, host: 22 #, host_ip: "0.0.0.0", id: "ssh", auto_correct: true
   
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
