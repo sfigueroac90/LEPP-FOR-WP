@@ -12,7 +12,7 @@ sudo yum install php-pgsql -y
 
 sudo chown ${USER}:${USER} /etc/nginx/conf.d
 
-sudo echo '
+sudo echo "
 
 server {
     listen   80;
@@ -40,7 +40,7 @@ server {
     }
 }
 
-' > /etc/nginx/conf.d/default.conf
+" > /etc/nginx/conf.d/default.conf
 
 sudo chown nginx:nginx /etc/nginx/conf.d
 sudo chown nginx:nginx /etc/nginx/conf.d/*
