@@ -1,7 +1,7 @@
-//Linux 
-//Nginx
-//MariaDB
-//PHP
+#//Linux 
+#//Nginx
+#//MariaDB
+#//PHP
 #https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-8-es
 #https://medium.com/@shoaibhassan_/install-wordpress-with-postgresql-using-apache-in-5-min-a26078d496fb
 #Paso 1: Instalar PostgreSQL
