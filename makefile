@@ -1,4 +1,4 @@
 git:
 	git add .
 	git commit -m "$m"
-	git push -u "$0" "$1"
+	git push -u $0 $1
