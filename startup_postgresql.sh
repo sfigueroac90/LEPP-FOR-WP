@@ -15,6 +15,3 @@ sudo -u postgres psql -c "create user app_dbeduvialwp with password 'explora'"
 sudo -u postgres psql -c "create database dbeduvialwp"
 sudo -u postgres psql -c 'grant all privileges on database dbeduvialwp to app_dbeduvialwp'
 sudo -u postgres psql -c '\l'
-
-# On postgresql run this
-#grant all privileges on database your_database to your_user;
