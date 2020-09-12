@@ -46,7 +46,7 @@ sudo chown nginx:nginx /etc/nginx/conf.d
 sudo chown nginx:nginx /etc/nginx/conf.d/*
 
 #Replace apache with nginx
-sed -i 's/apache/nginx/g' /etc/php-fpm.d/www.conf
+sudo sed -i 's/apache/nginx/g' /etc/php-fpm.d/www.conf
 
 
 #Create php test
