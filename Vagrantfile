@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   # box at https://app.vagrantup.com/generic/boxes/rhel8
   config.vm.box = "centos/8"
+  config.vm.box_url = "http://cloud.centos.org/centos/8/x86_64/images/CentOS-8-Vagrant-8.1.1911-20200113.3.x86_64.vagrant-virtualbox.box"
   config.ssh.private_key_path = "~/.ssh/id_rsa"
   config.ssh.forward_agent = true
   config.ssh.insert_key = false
@@ -31,7 +32,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", path: './startup_workstation.sh'
+  #config.vm.provision "shell", path: './startup_workstation.sh'
   config.vm.provision "shell", path: './startup_nodejs.sh'
   config.vm.provision "shell", path: './startup_nginx.sh'
   config.vm.provision "shell", path: './startup_firewall.sh'
