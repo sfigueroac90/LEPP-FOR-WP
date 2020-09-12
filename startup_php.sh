@@ -12,18 +12,18 @@ sudo yum install php-pgsql -y
 
 sudo chown ${USER}:${USER} /etc/nginx/conf.d
 
-sudo echo '
+sudo echo "
 
 server {
     listen   80;
     server_name  your_server_ip;
 
-    # note that these lines are originally from the "location /" block
+    # note that these lines are originally from the 'location /' block
     root   /usr/share/nginx/html;
     index index.php index.html index.htm;
 
     location / {
-        try_files "$uri" "$uri"/ =404;
+        try_files \$uri \$uri/ =404;
     }
     error_page 404 /404.html;
     error_page 500 502 503 504 /50x.html;
@@ -32,15 +32,15 @@ server {
     }
 
     location ~ \.php$ {
-        try_files "$uri" =404;
+        try_files \$uri =404;
         fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
         fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
         include fastcgi_params;
     }
 }
 
-' > /etc/nginx/conf.d/default.conf
+" > /etc/nginx/conf.d/default.conf
 
 sudo chown nginx:nginx /etc/nginx/conf.d
 sudo chown nginx:nginx /etc/nginx/conf.d/*
