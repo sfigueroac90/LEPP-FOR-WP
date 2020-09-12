@@ -16,7 +16,7 @@ sudo echo "
 
 server {
     listen   80;
-    server_name  your_server_ip;
+    server_name  127.0.0.1;
 
     # note that these lines are originally from the 'location /' block
     root   /usr/share/nginx/html;
