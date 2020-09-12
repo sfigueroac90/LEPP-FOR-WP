@@ -38,6 +38,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: './startup_firewall.sh'
   #config.vm.provision "shell", path: './startup_nginx.sh'
   config.vm.provision "shell", path: './startup_php.sh'
+  config.vm.provision "shell", path: './startup_postgresql.sh'
 
   #config.vm.provision "shell", path: './create_test_reactapp.sh'
   #config.vm.provision "shell", path: './startup_LEMP_PostgreSQL.sh'
